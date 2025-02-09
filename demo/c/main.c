@@ -10,6 +10,7 @@
 
 #include "setupFonts.h"
 #include "IconsFontAwesome6.h"
+
 #include "cimspinner.h"
 
 #ifdef IMGUI_HAS_IMSTR
@@ -39,7 +40,7 @@ int main(int argc, char *argv[]) {
     // just an extra window hint for resize
     glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
-    GLFWwindow *window = glfwCreateWindow(1024, 900, "CImSpinner with C language" , NULL, NULL);
+    GLFWwindow *window = glfwCreateWindow(1024, 900, "CImSpinner with C language 2025/02" , NULL, NULL);
     if (!window) {
         printf("Failed to create window! Terminating!\n");
         glfwTerminate();
@@ -94,6 +95,7 @@ int main(int argc, char *argv[]) {
 
         // show a simple window that we created ourselves.
         {
+         #if 1
             char *title = "ImGui: ImSpinner / CImSpinner demo with C lang. " ICON_FA_CAT;
             igBegin(title, NULL, 0);
             static const ImColor red = {.Value = {.x = 1.f, .y = 0.f, .z = 0.f, .w = 1.f}};
@@ -119,7 +121,16 @@ int main(int argc, char *argv[]) {
             igNewLine();
             igText("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / igGetIO()->Framerate, igGetIO()->Framerate);
             igEnd();
+          #endif
         }
+        {
+         #ifdef IMSPINNER_DEMO
+            igBegin("ImSpinner demo", NULL, 0);
+            demoSpinners();
+            igEnd();
+         #endif
+        }
+
 
         // render
         igRender();

@@ -2,9 +2,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [CImSpinner](#cimspinner)
-  - [Notice](#notice)
   - [Prerequisites](#prerequisites)
   - [Build and run demo](#build-and-run-demo)
+  - [Similar project ImGui / CImGui](#similar-project-imgui--cimgui)
+  - [SDL Game tutorial Platfromer](#sdl-game-tutorial-platfromer)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -17,14 +18,6 @@ Amazing [ImSpinner](https://github.com/dalerank/imspinner) !
 CImSpinner is C language bindings for ImSpinner.
 
 ![alt](img/cimspinner.gif)
-
-### Notice
-
----
-
-Now highly work in progress.
-
-
 
 ### Prerequisites
 
@@ -47,12 +40,14 @@ Now highly work in progress.
 git clone --recursive https://github.com/dinau/cimspinner
 ```
 
-- Run C language simple demo
+- Run simple demo and ImSpinner original demo in C language 
 
    ```sh
    cd demo/c
    make run
    ```
+
+   ![alt ](img/cimspinner_demo.png)
 
 - Run C++ language demo  
 This is original [ImSpinner](https://github.com/dalerank/imspinner)  demo.
@@ -61,3 +56,32 @@ This is original [ImSpinner](https://github.com/dalerank/imspinner)  demo.
    cd demo/cpp
    make run
    ```
+
+### Similar project ImGui / CImGui
+
+---
+
+| Language             |          | Project                                                                                                                                         |
+| -------------------: | :---:    | :----------------------------------------------------------------:                                                                              |
+| **Nim**              | Compiler | [ImGuin](https://github.com/dinau/imguin), [Nimgl_test](https://github.com/dinau/nimgl_test), [Nim_implot](https://github.com/dinau/nim_implot) |
+| **Lua**              | Script   | [LuaJITImGui](https://github.com/dinau/luajitImGui)                                                                                             |
+| **Zig**, C lang.     | Compiler | [Dear_Bindings_Build](https://github.com/dinau/dear_bindings_build)                                                                             |
+| **Zig**              | Compiler | [ImGuinZ](https://github.com/dinau/imguinz)                                                                                                     |
+| **NeLua**            | Compiler | [NeLuaImGui](https://github.com/dinau/neluaImGui)                                                                                               |
+| **Python**           | Script   | [DearPyGui for 32bit WindowsOS Binary](https://github.com/dinau/DearPyGui32/tree/win32)                                                         |
+
+### SDL Game tutorial Platfromer
+
+---
+
+![ald](https://github.com/dinau/nelua-platformer/raw/main/img/platformer-nelua-sdl2.gif)
+
+| Language    [^order] |          | SDL         | Project                                                                                                                                               |
+| -------------------: | :---:    | :---:       | :----------------------------------------------------------------:                                                                                    |
+| **LuaJIT**           | Script   | SDL2        | [LuaJIT-Platformer](https://github.com/dinau/luajit-platformer)
+| **Nelua**            | Compiler | SDL2        | [NeLua-Platformer](https://github.com/dinau/nelua-platformer)
+| **Nim**              | Compiler | SDL3 / SDL2 | [Nim-Platformer-sdl2](https://github.com/def-/nim-platformer)/ [Nim-Platformer-sdl3](https://github.com/dinau/sdl3_nim/tree/main/examples/platformer) |
+| **Ruby**             | Script   | SDL3        | [Ruby-Platformer](https://github.com/dinau/ruby-platformer)                                                                                           |
+| **Zig**              | Compiler | SDL2        | [Zig-Platformer](https://github.com/dinau/zig-platformer)                                                                                             |
+
+[^order]: Alphabectial order
