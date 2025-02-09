@@ -1,0 +1,21 @@
+name: Linux OS(Ubuntu) compilation
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  build_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+      - run: |
+          sudo apt install xorg-dev libopengl-dev libgl1-mesa-dev
+          sudo apt install libglfw3 libglfw3-dev
+          make

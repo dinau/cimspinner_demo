@@ -1,3 +1,8 @@
+*.nims
+*.org
+README.html
+org.html
+.build/
 # Prerequisites
 *.d
 
