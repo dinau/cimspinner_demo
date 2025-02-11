@@ -1,4 +1,3 @@
-#include "cimspinner_config.h"
 
 #include "imspinner.h"
 #include "cimspinner.h"
@@ -1584,6 +1583,6 @@ CIMSPINNER_API void SpinnerSplineAngEx(const char *label, float radius, float th
 
 #ifdef IMSPINNER_DEMO
 CIMSPINNER_API void demoSpinners() {
-  ImSpinner::demoSpinners(); 
+  ImSpinner::demoSpinners();
 }
 #endif

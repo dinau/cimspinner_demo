@@ -38,6 +38,7 @@ OBJS = $(addprefix $(BUILD_DIR)/,$(notdir $(SOURCES:.cpp=.o))) $(addprefix $(BUI
 UNAME_S := $(shell uname -s)
 LINUX_GL_LIBS = -lGL
 
+CXXFLAGS += -DIMSPINNER_DEMO
 CXXFLAGS += -MMD -MP
 CXXFLAGS += -Wno-unused-variable -Wno-sign-compare -Wno-unused-but-set-variable
 CXXFLAGS +=  -O1 -Wl,-s

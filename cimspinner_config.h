@@ -1,7 +1,5 @@
 #pragma once
 
-#define IMSPINNER_DEMO
-
 #define SPINNER_RAINBOWMIX
 #define SPINNER_ROTATINGHEART
 #define SPINNER_ANG8
