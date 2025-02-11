@@ -158,7 +158,7 @@ int main(int, char **) {
     bool show_demo_window = true;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-    int showDelay = 1;
+    int showWindowDelay = 1;
 
     // Main loop
 #ifdef __EMSCRIPTEN__
@@ -257,12 +257,8 @@ int main(int, char **) {
 
         glfwSwapBuffers(window);
 
-        if (showDelay >= 0) {
-            showDelay--;
-        }
-        if (showDelay == 0) {
-            glfwShowWindow(window);
-        }
+        if (showWindowDelay >= 0) { showWindowDelay--; }
+        if (showWindowDelay == 0) { glfwShowWindow(window); }
     }
 #ifdef __EMSCRIPTEN__
     EMSCRIPTEN_MAINLOOP_END;

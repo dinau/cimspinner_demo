@@ -35,6 +35,7 @@ int main(int argc, char *argv[]) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
+    glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
     const char *glsl_version = "#version 330";
 
     // just an extra window hint for resize
@@ -148,6 +149,9 @@ int main(int argc, char *argv[]) {
         }
 #endif
         glfwSwapBuffers(window);
+
+        if (showWindowDelay >= 0){ showWindowDelay--; }
+        if (showWindowDelay == 0){ glfwShowWindow(window); }
     }
 
     // clean up
