@@ -94,36 +94,27 @@ int main(int argc, char *argv[]) {
         if (showDemoWindow)
             igShowDemoWindow(&showDemoWindow);
 
-        // show a simple window that we created ourselves.
+        // Show CImSpinner demo
         {
-         #if 1
-            char *title = "ImGui: ImSpinner / CImSpinner demo with C lang. " ICON_FA_CAT;
+            char *title = "ImGui: CImSpinner demo with C lang.  2025/02  " ICON_FA_CAT;
             igBegin(title, NULL, 0);
             static const ImColor red = {.Value = {.x = 1.f, .y = 0.f, .z = 0.f, .w = 1.f}};
             static const ImColor blue = {.Value = {.x = 0.f, .y = 0.f, .z = 1.f, .w = 1.f}};
-            SpinnerRotatingHeart("RHeart", 16, 2, red, 4);
-            igSameLine(0.0, -1.0);
-            SpinnerRainbowMix("Rmix", 16, 2, blue, 4);
-            igSameLine(0.0, -1.0);
-            SpinnerAng8("Ang", 16, 2);
-            igSameLine(0.0, -1.0);
-            SpinnerPulsar("Pulsar", 16, 2);
-            igSameLine(0.0, -1.0);
-            SpinnerClock("Clock", 16, 2);
-            igSameLine(0.0, -1.0);
-            SpinnerAtom("atom", 16, 2);
-            igSameLine(0.0, -1.0);
-            SpinnerSwingDots("wheel", 16, 6);
-            igSameLine(0.0, -1.0);
-            SpinnerDotsToBar("tobar", 16, 2, 0.5);
-            igSameLine(0.0, -1.0);
+
+            SpinnerDnaDotsEx("DnaDotV",       16, 2, red, 1.2, 8, 0.25f, true); igSameLine(0.0, -1.0);
+            SpinnerRainbowMix("Rmix",         16, 2, blue, 4);                  igSameLine(0.0, -1.0);
+            SpinnerAng8("Ang",                16, 2);                           igSameLine(0.0, -1.0);
+            SpinnerPulsar("Pulsar",           16, 2);                           igSameLine(0.0, -1.0);
+            SpinnerClock("Clock",             16, 2);                           igSameLine(0.0, -1.0);
+            SpinnerAtom("atom",               16, 2);                           igSameLine(0.0, -1.0);
+            SpinnerSwingDots("wheel",         16, 6);                           igSameLine(0.0, -1.0);
+            SpinnerDotsToBar("tobar",         16, 2, 0.5);                      igSameLine(0.0, -1.0);
             SpinnerBarChartRainbow("rainbow", 16, 4, red, 4);
 
-            igNewLine();
             igText("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / igGetIO()->Framerate, igGetIO()->Framerate);
             igEnd();
-          #endif
         }
+
         {
          #ifdef IMSPINNER_DEMO
             igBegin("ImSpinner demo", NULL, 0);
