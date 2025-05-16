@@ -1,3 +1,10 @@
+# Generate C language sources from "imspinner.h" written in C++.
+# Input file: libs/imspinner/imspinner.h
+# Output files:
+#   ./cimspinner.h
+#   ./cimspinner.cpp
+
+
 File.open("libs/imspinner/imspinner.h"){|fp|
   cppFile = []
   cppFile.push "#include \"cimspinner_config.h\""
@@ -32,7 +39,7 @@ File.open("libs/imspinner/imspinner.h"){|fp|
       cppFile.push  "   void Spinner::#{funcname}(#{cppargs.gsub("/*","").gsub("*/","")})"
       cppFile.push  "*/"
       # get short argumants
-      cargsShortDef =  []
+      # void SpinnerFadeBars(const char *label, float w, const ImColor &color = white, float speed = 2.8f, size_t bars = 3, bool scale = false)
       cppargs.split(",").each {|arg|
         if not arg.include? "="
           # C function args short
@@ -41,7 +48,7 @@ File.open("libs/imspinner/imspinner.h"){|fp|
           cppargsShort.push arg.gsub("/*","").gsub("*/","").split(" ").last.gsub("*","").gsub("&","")
         else
           cargsLongDef.push arg.split("=")[0].gsub("&","").strip
-          cppargsLong.push    arg.split("=")[0].split(" ").last.gsub("&","")
+          cppargsLong.push  arg.split("=")[0].split(" ").last.gsub("&","")
         end
       }
       #-------------------------------------------------
