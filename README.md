@@ -1,8 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
-- [CImSpinner](#cimspinner)
+- [ImSpinner demo in C](#imspinner-demo-in-c)
   - [Prerequisites](#prerequisites)
   - [Build and run demo](#build-and-run-demo)
   - [Similar project ImGui / CImGui](#similar-project-imgui--cimgui)
