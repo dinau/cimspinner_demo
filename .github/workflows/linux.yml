@@ -16,6 +16,6 @@ jobs:
         with:
           submodules: 'recursive'
       - run: |
-          sudo apt install xorg-dev libopengl-dev libgl1-mesa-dev
+          sudo apt install libopengl-dev libgl1-mesa-dev
           sudo apt install libglfw3 libglfw3-dev
           make

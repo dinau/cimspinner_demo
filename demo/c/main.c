@@ -21,6 +21,11 @@
 #define igButton igButton_Str
 #endif
 
+ImColor genColor(int i)  {
+    ImColor col;
+    ImColor_HSV(&col, (float)(i) * 0.25, 0.8, 0.8, 1.0);
+    return col;
+}
 
 //------"
 // main
@@ -101,15 +106,17 @@ int main(int argc, char *argv[]) {
             static const ImColor red = {.Value = {.x = 1.f, .y = 0.f, .z = 0.f, .w = 1.f}};
             static const ImColor blue = {.Value = {.x = 0.f, .y = 0.f, .z = 1.f, .w = 1.f}};
 
-            SpinnerDnaDotsEx("DnaDotV",       16, 2, red, 1.2, 8, 0.25f, true); igSameLine(0.0, -1.0);
-            SpinnerRainbowMix("Rmix",         16, 2, blue, 4);                  igSameLine(0.0, -1.0);
-            SpinnerAng8("Ang",                16, 2);                           igSameLine(0.0, -1.0);
+            /* These spinners are defined in cimspinner_conifg.h by defalult. */
+            SpinnerDnaDotsEx("DnaDotV",       16, 2, red, 1.2, 8, 0.25f, true); igSameLine(0.0, -1.0); // SPINNER_DNADOTS
+            SpinnerRainbowMix("Rmix",         16, 2, blue, 4);                  igSameLine(0.0, -1.0); // SPINNER_RAINBOWMIX
+            SpinnerAng8("Ang",                16, 2);                           igSameLine(0.0, -1.0); // ...
             SpinnerPulsar("Pulsar",           16, 2);                           igSameLine(0.0, -1.0);
             SpinnerClock("Clock",             16, 2);                           igSameLine(0.0, -1.0);
             SpinnerAtom("atom",               16, 2);                           igSameLine(0.0, -1.0);
             SpinnerSwingDots("wheel",         16, 6);                           igSameLine(0.0, -1.0);
             SpinnerDotsToBar("tobar",         16, 2, 0.5);                      igSameLine(0.0, -1.0);
-            SpinnerBarChartRainbow("rainbow", 16, 4, red, 4);
+            SpinnerBarChartRainbow("rainbow", 16, 4, red, 4);                   igSameLine(0.0, -1.0);
+            SpinnerCamera(         "Camera",  16, 8, genColor);                 // Add "-D SPINNER_CAMERA" to compilation option.
 
             igText("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / igGetIO()->Framerate, igGetIO()->Framerate);
             igEnd();

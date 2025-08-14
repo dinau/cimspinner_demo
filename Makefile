@@ -4,11 +4,9 @@ all:
 
 .PHONEY: gen run format clean
 
-gen: genC
-
-genC:
+gen:
 	ruby genCImSpinner.rb
-	
+
 run:
 	$(MAKE) -C demo/c run
 

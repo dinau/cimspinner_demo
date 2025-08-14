@@ -38,7 +38,9 @@ SOURCES += $(notdir $(wildcard $(IMGUI_DIR)/*.cpp))
 SOURCES += $(notdir $(wildcard $(IM_SPINNER_DIR)/*.cpp))
 SOURCES += $(notdir $(wildcard $(CIM_SPINNER_DIR)/*.cpp))
 
-CXXFLAGS += -DIMSPINNER_DEMO
+CXXFLAGS += -D IMSPINNER_DEMO
+CXXFLAGS += -D SPINNER_CAMERA
+
 CXXFLAGS += $(HIDE_CONSOLE)
 CXXFLAGS += -MMD -MP
 CXXFLAGS += -O1 -Wl,-s -Wno-unused-but-set-variable -Wno-unused-variable -Wno-sign-compare

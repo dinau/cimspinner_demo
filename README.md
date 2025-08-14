@@ -10,13 +10,13 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## CImSpinner
+## ImSpinner demo in C
 
 ![alt](https://github.com/dinau/cimspinner/actions/workflows/windows.yml/badge.svg)
 ![alt](https://github.com/dinau/cimspinner/actions/workflows/linux.yml/badge.svg) 
 
 Amazing [ImSpinner](https://github.com/dalerank/imspinner) !  
-CImSpinner is C language bindings for ImSpinner.
+This project is simple C binding demo using ImSpinner.
 
 ![alt](img/cimspinner.gif)
 
@@ -30,7 +30,7 @@ CImSpinner is C language bindings for ImSpinner.
 
   ```sh
   $ sudo apt install gcc g++ make git 
-  $ sudo apt install xorg-dev lib{opengl-dev,gl1-mesa-dev,glfw3,glfw3-dev,libsdl2-dev}
+  $ sudo apt install lib{opengl-dev,gl1-mesa-dev,glfw3,glfw3-dev,libsdl2-dev}
   ```
 
 ### Build and run demo
@@ -38,7 +38,7 @@ CImSpinner is C language bindings for ImSpinner.
 ---
 
 ```sh
-git clone --recursive https://github.com/dinau/cimspinner
+git clone --recursive https://github.com/dinau/cimspinner_demo
 ```
 
 - Run simple demo and ImSpinner original demo in C language 
