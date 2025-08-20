@@ -12,10 +12,11 @@ jobs:
   build_linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'recursive'
-      - run: |
-          sudo apt install libopengl-dev libgl1-mesa-dev
-          sudo apt install libglfw3 libglfw3-dev
-          make
+    - uses: actions/checkout@v4
+      with:
+        submodules: 'recursive'
+    - name: make
+    - run: |
+        sudo apt install libopengl-dev libgl1-mesa-dev
+        sudo apt install libglfw3 libglfw3-dev
+        make
